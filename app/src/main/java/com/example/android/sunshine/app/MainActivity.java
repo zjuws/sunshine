@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.android.sunshine.app.sync.SunshineSyncAdapter;
+
 public class MainActivity extends AppCompatActivity implements ForecastFragment.Callback{
     private String mLocation;
     private static final String DETAILFRAGMENT_TAG = "DFTAG";
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements ForecastFragment.
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         //client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        SunshineSyncAdapter.initializeSyncAdapter(this);
     }
 
     @Override
